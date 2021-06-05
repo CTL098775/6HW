@@ -48,7 +48,7 @@ namespace _6HW
             try
             {
                 o_Conn.Open();
-                SqlCommand o_Com = new SqlCommand("DELETE FROM Users WHERE Name=N'" + tb_Name.Text, o_Conn);
+                SqlCommand o_Com = new SqlCommand("DELETE FROM Users WHERE Name=N'" + tb_Name.Text  +"'", o_Conn);
                 int del = o_Com.ExecuteNonQuery();
                 Response.Redirect("./6HW.aspx");
                 o_Conn.Close();
